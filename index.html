@@ -3,28 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Paraná Solidaria</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav>
-    <div class="logo">
-      <img id="logo" src="img/logo.png"></img>
-    </div>
-    <!-- <img class="hamburguer" src="img/hamburger-menu.svg" alt="hamburguer"> -->
-    <ul class="nav-links">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">¿Quienes Somos?</a></li>
-      <li><a href="#">¿Como Donar?</a></li>
-      <li><a href="#">Quiero Ser Parte</a></li>
-    </ul>
-    <div class="burger">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
-  </nav>
+  <header>
+    <nav>
+      <div class="logo">
+        <img id="logo" src="img/logo.png"></img>
+      </div>
+      <!-- <img class="hamburguer" src="img/hamburger-menu.svg" alt="hamburguer"> -->
+      <ul class="nav-links">
+        <!-- TODO: Well I left this option link to go homepage -->
+        <!-- <li><a href="#">Inicio</a></!--> 
+        <li><a data-page="aboutus" href="#aboutus">¿Quienes Somos?</a></li>
+        <li><a data-page="donors" href="#donors">¿Como Donar?</a></li>
+        <li><a data-page="beapart" href="#beapart">Quiero Ser Parte</a></li>
+        <div class="bubble"></div>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
 
+  <!-- ! Website Sections -->
+  <main>
+    <section data-index="0" id="aboutus" class="aboutus">
+      <h1>Quienes Somos</h1>
+    </section>
+    <section data-index="1" id="donors" class="donors">
+      <h1>Como Donar</h1>
+    </section>
+    <section data-index="2" id="beapart" class="beapart">
+      <h1>Quiero ser parte</h1>
+    </section>
+  </main>
   <!-- !We add a Tweemax library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.js"
     integrity="sha256-mfgvzVjyIcoXo0ElsT8uFIuDWYkvKCQ6wrkm6If7iug="

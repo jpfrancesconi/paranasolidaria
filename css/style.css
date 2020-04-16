@@ -2,6 +2,7 @@
 
 /* Google Font: News Cycle */
 @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:italic,wght@0,700;0,900;1,700;1,900&display=swap');
 
 *{
   margin: 0;
@@ -10,12 +11,20 @@
 }
 
 body {
-  /*font-family: 'Lato', sans-serif;*/
-  font-family: 'News Cycle', sans-serif;
+  font-family: 'Lato', sans-serif;
+  /*font-family: 'News Cycle', sans-serif;*/
+  /*overflow-x: hidden;*/
 }
 
 #logo {
   width: 60px;
+}
+
+header{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 nav {
@@ -23,6 +32,9 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
+
+  /*background-color: rgb(71, 54, 87);*/
+  /*overflow-x: hidden;*/
 }
 
 .nav-links{
@@ -53,9 +65,45 @@ nav {
   height: 3px;
   background-color: black;
   margin: 5px;
+  transition: all 0.3s ease;
 }
 
-/* !Mobile styles */
+.bubble{
+  position: absolute;
+  z-index: -2;
+  /*background: linear-gradient(to right top, #f46b45, #eea849);*/
+  background: linear-gradient(to right top, #bf2e65, #cc5583);
+  transform: scaleX(1.3) scaleY(2);
+  transition: all 0.5s ease;
+}
+
+/* ************************************************!Main styles */
+section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section h1{
+  font-size: 5rem;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+.aboutus{
+  /*background: linear-gradient(to right top, #f46b45, #eea849);*/
+  background: linear-gradient(to right top, #bf2e65, #cc5583);
+}
+.donors{
+  /*background: linear-gradient(to right top, #005c97, #363795);*/
+  background: linear-gradient(to right top, #e8ba2f, #e4bd47);
+}
+.beapart{
+  /*background: linear-gradient(to right top, #e53935, #e35d5b);*/
+  background: linear-gradient(to right top, #3fa9f5, #62b6f1);
+}
+
+/* ************************************************!Mobile styles */
 @media screen and (max-width: 1024px){
   .nav-links{
     width: 70%;
@@ -63,20 +111,24 @@ nav {
 }
 
 @media screen and (max-width: 768px){
+  html{
+    /*overflow-x: hidden;*/
+  }
   body{
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
   }
 
   .nav-links{
-    position: absolute;
-    width: 50%;
+    position: fixed;
     right: 0px;
-    height: 92vh;
-    top: 9vh;
-    background-color: rgb(71, 54, 87);
+    height: 90vh;
+    top: 10vh;
+    /*background-color: rgb(71, 54, 87);*/
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 50%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
@@ -90,10 +142,31 @@ nav {
   }
 
   .nav-links a{
-    color: white;
+    color: black;
   }
 }
 
 .nav-active{
   transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px, -6px);
 }

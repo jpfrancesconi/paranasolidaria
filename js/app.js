@@ -1,6 +1,7 @@
 const sections = document.querySelectorAll("section");
 const bubble = document.querySelector(".bubble");
 const gradients = [
+  "#eae5e5",
   "linear-gradient(to right top, #bf2e65, #cc5583)",
   "linear-gradient(to right top, #e8ba2f, #e4bd47)",
   "linear-gradient(to right top, #3fa9f5, #62b6f1)"
@@ -37,6 +38,22 @@ function navCheck(entries){
 sections.forEach(section => {
   observer.observe(section);
 });
+
+const hero = document.querySelector('.hero');
+const tl = new TimelineMax();
+
+tl.fromTo(
+  hero,
+  0.5,
+  { height: "0%" },
+  { height: "90%", ease: Power2.easeInOut }
+)
+.fromTo(
+  hero,
+  1,
+  { width: "100%" },
+  { width: "80%", ease: Power2.easeInOut }
+);
 
 const navSlide = () => {
   const burger = document.querySelector('.burger');

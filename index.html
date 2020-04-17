@@ -16,7 +16,7 @@
       <!-- <img class="hamburguer" src="img/hamburger-menu.svg" alt="hamburguer"> -->
       <ul class="nav-links">
         <li TODO: Well I left this option link to go homepage -->
-        <li><a data-page="home" href="#home">Inicio</a></li> 
+        <li><a data-page="home" href="#home">Inicio</a></li>
         <li><a data-page="aboutus" href="#aboutus">¿Quienes Somos?</a></li>
         <li><a data-page="donors" href="#donors">¿Como Donar?</a></li>
         <li><a data-page="beapart" href="#beapart">Quiero Ser Parte</a></li>
@@ -35,9 +35,9 @@
     <section data-index="0" id="home" class="home">
       <div class="hero">
         <img src="img/hero.png" alt="hero">
-        <!--Div where the WhatsApp will be rendered-->  
+        <!--Div where the WhatsApp will be rendered-->
         <div id="WAButton"></div>
-      </div>  
+      </div>
     </section>
     <section data-index="1" id="aboutus" class="aboutus">
       <h1>¿Quienes Somos?</h1>
@@ -56,18 +56,18 @@
   <!-- !We add ower own script -->
   <script src="js/app.js"></script>
 
-  <!--JQuery-->  
-<script type="text/javascript" src="floating-whatsapp/jquery-3.3.1.min.js"></script>  
-<!--Floating WhatsApp css-->  
-<link rel="stylesheet" href="floating-whatsapp/floating-wpp.min.css">  
-<!--Floating WhatsApp javascript-->  
+  <!--JQuery-->
+<script type="text/javascript" src="floating-whatsapp/jquery-3.3.1.min.js"></script>
+<!--Floating WhatsApp css-->
+<link rel="stylesheet" href="floating-whatsapp/floating-wpp.min.css">
+<!--Floating WhatsApp javascript-->
 <script type="text/javascript" src="floating-whatsapp/floating-wpp.min.js"></script>
-<script type="text/javascript">  
+<script type="text/javascript">
   $(function () {
           $('#WAButton').floatingWhatsApp({
-              phone: 'WHATSAPP-PHONE-NUMBER', //WhatsApp Business phone number
-              headerTitle: 'Somos paranasolidaria gracias por comunicarte', //Popup Title
-              popupMessage: 'Contanos como podemos ayudarte?', //Popup Message
+              phone: '5493436228391', //WhatsApp Business phone number
+              headerTitle: 'SOMOS PARANA SOLIDARIA !', //Popup Title
+              popupMessage: 'Contanos como podemos ayudarte', //Popup Message
               showPopup: true, //Enables popup display
               buttonImage: '<img src="floating-whatsapp/whatsapp.svg" />', //Button Image
               //headerColor: 'crimson', //Custom header color
@@ -76,7 +76,7 @@
 
           });
       });
-</script>  
+</script>
 
 </body>
 </html>

@@ -25,6 +25,7 @@ header{
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 999;
 }
 
 nav {
@@ -80,9 +81,7 @@ nav {
 /* ************************************************!Main styles */
 section{
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 section h1{
   font-size: 5rem;

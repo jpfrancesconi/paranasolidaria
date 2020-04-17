@@ -41,7 +41,7 @@ sections.forEach(section => {
 
 const hero = document.querySelector('.hero');
 const tl = new TimelineMax();
-
+/*
 tl.fromTo(
   hero,
   0.5,
@@ -53,7 +53,7 @@ tl.fromTo(
   1,
   { width: "100%" },
   { width: "80%", ease: Power2.easeInOut }
-);
+);*/
 
 const navSlide = () => {
   const burger = document.querySelector('.burger');
@@ -72,7 +72,7 @@ const navSlide = () => {
         link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
       }
     });
-    
+
     // Burger Animation
     burger.classList.toggle('toggle');
   });

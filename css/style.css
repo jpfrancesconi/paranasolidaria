@@ -55,7 +55,9 @@ nav {
   font-weight: bold;
   font-size: 13px;
 }
-
+.nav-links li i{
+  font-size: 20px;
+}
 .burger {
   display: none;
   cursor: pointer;

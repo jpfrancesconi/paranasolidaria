@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Paraná Solidaria</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,7 +20,7 @@
         <li><a data-page="home" href="#home">Inicio</a></li>
         <li><a data-page="aboutus" href="#aboutus">¿Quienes Somos?</a></li>
         <li><a data-page="donors" href="#donors">¿Como Donar?</a></li>
-        <li><a data-page="beapart" href="#beapart">Quiero Ser Parte</a></li>
+        <li><a data-page="beapart" href="#beapart">Seguinos <i class="fa fa-instagram"></i></a></li>
         <div class="bubble"></div>
       </ul>
       <div class="burger">
@@ -34,23 +35,42 @@
   <main>
     <section data-index="0" id="home" class="home">
       <div class="hero">
-        <img src="img/hero.png" alt="hero">
+        <img src="img/header.png" alt="hero">
         <!--Div where the WhatsApp will be rendered-->
         <div id="WAButton"></div>
       </div>
     </section>
     <section data-index="1" id="aboutus" class="aboutus">
       <div class="container">
-        <h1>¿Quienes Somos?</h1>
+        <h1 class="title-aboutus">¿Quienes Somos?</h1>
+        <div class="content">
+          <img src="img/somos-icon.png" alt="">
+          <p><span>SOMOS UNA RED SOLIDARIA EN PARANÁ,</span> CREADA EN EL CONTEXTO DE LA PANDEMIA CORONAVIRUS</p>
+        </div>
+        <div class="content">
+          <p><span>DESTINADO A HOGARES</span> CON INGRESOS DE LA ECONOMIA INFORMAL O POPULAR</p>
+          <img src="img/destinado-icon.png" alt="">
+        </div>
+        <div class="content">
+          <img src="img/queremos-icon.png" alt="">
+          <p>QUEREMOS <span>FACILITAR EL ACCESO A ALIMENTOS Y PRODUCTOS DE HIGIENE Y LIMPIEZA</span></p>
+          </div>
+        <!-- <ul class="list-aboutus">
+          <li><p><span>SOMOS UNA RED SOLIDARIA EN PARANÁ,</span> CREADA EN EL CONTEXTO DE LA PANDEMIA CORONAVIRUS</p></li>
+          <li><p><span>DESTINADO A HOGARES</span> CON INGRESOS DE LA ECONOMIA INFORMAL O POPULAR</p></li>
+          <li><p>QUEREMOS <span>FACILITAR EL ACCESO A ALIMENTOS Y PRODUCTOS DE HIGIENE Y LIMPIEZA</span></p></li>
+        </ul> -->
       </div>
     </section>
     <section data-index="2" id="donors" class="donors">
       <h1>¿Como Donar?</h1>
     </section>
     <section data-index="3" id="beapart" class="beapart">
-      <h1>Quiero ser parte</h1>
+      <h1>Seguinos</h1>
     </section>
   </main>
+  <!-- !We add JQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- !We add a Tweemax library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.js"
     integrity="sha256-mfgvzVjyIcoXo0ElsT8uFIuDWYkvKCQ6wrkm6If7iug="
@@ -79,6 +99,31 @@
           });
       });
 </script>
+<script>
+  $(document).ready(function () {
+    // Add smooth scrolling to all links
+    $("a").on('click', function (event) {
 
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+</script>
 </body>
 </html>
